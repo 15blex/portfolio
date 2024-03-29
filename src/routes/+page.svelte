@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import Card from "../lib/components/Card/Card.svelte";
+  let age = Math.abs(new Date(Date.now() - new Date(1990, 5, 15).getTime()).getUTCFullYear() - 1970);
+</script>
+
+<svelte:head>
+  <title>Home</title>
+</svelte:head>
+
+<Card location="Barcelona, Spain" email="15blex@gmail.com" age={age}/>
